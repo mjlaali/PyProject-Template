@@ -18,6 +18,9 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
 
 ENV PATH /opt/conda/bin:$PATH
 
+# Install required package
+RUN apt-get install -y vim
+
 # Install the latest version of tensorflow with the GPU support.
 RUN pip install tensorflow-gpu
 
